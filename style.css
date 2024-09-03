@@ -263,11 +263,10 @@
 
     /* Right column taking 1/4 of the page */
     .right-column {
-        flex: 1;
+        flex: 2;
         padding: 20px;
         position: sticky;
-        top: 50%; /* Start sticky positioning 50% from the top */
-        transform: translateY(-10%); /* Center the iframe vertically */
+        top: 20%; /* Start sticky positioning 50% from the top */
         height: fit-content;
     }
 
