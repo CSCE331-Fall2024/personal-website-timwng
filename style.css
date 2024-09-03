@@ -21,6 +21,9 @@
         font-weight: bold;
         overflow: hidden;
         padding: 20px 30px;
+        z-index: 1000;
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding is included in width */
     }
 
     /* HEADER LINKS */
@@ -69,10 +72,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 80vh;
         color: white;
         font-family: 'Playfair Display';
-        margin-top: 60px; 
+        margin-top: 20px; 
+        margin-bottom: 80px; 
     }
 
     .main h1 {
@@ -151,7 +154,7 @@
         display: flex;
         flex-direction: column;
         flex: 0 0 100%;
-        padding: 70px;  
+        padding: 40px;  
         background: var(--card);
         border-radius: 12px;
         box-shadow: 0 5px 15px var(--shadow);
