@@ -3,7 +3,7 @@ function toggleStyle() {
     var stylename = current.getAttribute("href");
 
     var style;
-    if(stylename === "style1") {
+    if(stylename === "style1.css") {
         style = "style2.css";
     } else {
         style = "style1.css";
@@ -14,8 +14,11 @@ function toggleStyle() {
 } 
 
 window.onload = function() {
-    var current = document.getElementById("currentstyle")
-    current.setAttribute("href", localStorage.getItem("href"));
+    var current = document.getElementById("currentstyle");
+    var savedStyle = localStorage.getItem("href");
+    if (savedStyle) {
+        current.setAttribute("href", savedStyle);
+    }
 }
 
-document.getElementById("switch").addEventListener("click", toggleStyle)
+document.getElementById("switch").addEventListener("click", toggleStyle);
