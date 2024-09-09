@@ -50,6 +50,17 @@
         color: black;
     }
 
+    .header i {
+        text-align: center;
+        padding: 5px 20px;
+        color:white;
+        transition: transform 0.3s ease;
+    }
+
+    .header i:hover {
+        transform: scale(1.1);
+    }
+
     /* RIGHT ALIGN LINKS */
     .header-right {
         float: right;
@@ -74,7 +85,7 @@
         align-items: center;
         color: white;
         font-family: 'Playfair Display';
-        margin-top: 20px; 
+        margin-top: 10px; 
         margin-bottom: 80px; 
     }
 
@@ -86,7 +97,7 @@
         text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.8);
     }
     .main h2 {
-        font-size: 50px;
+        font-size: 40px;
         font-weight: normal;
         margin: 0;
         text-align: center;
@@ -160,6 +171,7 @@
         box-shadow: 0 5px 15px var(--shadow);
         scroll-snap-align: start;
         transition: all 0.3s;
+        align-items: center;    
     }
 
     .card:not(:last-child) {
@@ -176,7 +188,10 @@
 
     .card .card-content {
         margin: 20px 0;
-        max-width: 85%;
+    }
+
+    .card p {
+        font-size: 15px;
     }
 
     .card .card-link-wrapper {
@@ -251,14 +266,14 @@
 /* ABOUT PAGE */
     .columns {
         display: flex;
-        align-items: flex-start; /* Align items to the top initially */
+        align-items: flex-start;
     }
 
     /* Left column taking 3/4 of the page */
     .left-column {
         flex: 3;
         padding: 20px;
-        overflow-y: auto; /* Enable scrolling if content overflows */
+        overflow-y: auto;
     }
 
     /* Right column taking 1/4 of the page */
@@ -266,11 +281,10 @@
         flex: 2;
         padding: 20px;
         position: sticky;
-        top: 20%; /* Start sticky positioning 50% from the top */
+        top: 20%;
         height: fit-content;
     }
 
-    /* Optional styling for the content */
     .left-column p {
         margin-bottom: 20px;
         line-height: 1.6;
