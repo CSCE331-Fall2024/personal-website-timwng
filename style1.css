@@ -112,6 +112,8 @@
 
     .main .intro {
         text-align: center;
+        margin-left: 160px;
+        margin-right: 160px;
     }
 
     .main img {
@@ -262,6 +264,43 @@
         margin-right: 40px;
         }
     }
+
+/* SERVICE PAGE */
+    @media (min-width: 20em)
+    {
+        .image-left, .image-right
+        {
+            display: flex;
+            align-items: center;
+        }
+
+        .image-left img
+        {
+
+            margin-right: 1em;
+            float: left; /* fallback */
+            box-shadow:2px 2px 30px var(--shadow);
+        }
+
+        .image-right img
+        {
+            order: 1;
+            margin-left: 1em;
+            float: right; /* fallback */
+            box-shadow:2px 2px 30px var(--shadow);
+        }
+        
+        /* clearfix for fallback */
+        .image-left::after,
+        .image-right::after
+        {
+            content: "";
+        display: block;
+            clear: both;
+        }
+    }
+    
+
 
 /* ABOUT PAGE */
     .columns {
