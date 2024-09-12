@@ -4,149 +4,148 @@
     --black: black;
     --shadow: rgba(0, 0, 0, 0.8);
     --card: rgb(74, 74, 74);
-  }
+}
 
 /* BODY */
-    body {
-        /* https://www.freepik.com/free-photo/black-abstract-background-wallpaper-image_16250130.htm#query=dark%20website%20background&position=33&from_view=keyword&track=ais_hybrid&uuid=d5b11923-8311-4460-9add-d4a3aaa3bd31 */
-        background-image: url(images/black-abstract-background-wallpaper-image.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-    }
+body {
+    /* https://www.freepik.com/free-photo/black-abstract-background-wallpaper-image_16250130.htm#query=dark%20website%20background&position=33&from_view=keyword&track=ais_hybrid&uuid=d5b11923-8311-4460-9add-d4a3aaa3bd31 */
+    background-image: url(images/black-abstract-background-wallpaper-image.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 /* HEADER */
-    .header {
-        font-family: 'Outfit';
-        font-weight: bold;
-        overflow: hidden;
-        padding: 20px 30px;
-        z-index: 1000;
-        width: 100%;
-        box-sizing: border-box; /* Ensures padding is included in width */
-    }
+.header {
+    font-family: 'Outfit';
+    font-weight: bold;
+    overflow: hidden;
+    padding: 20px 30px;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
 
-    /* HEADER LINKS */
+/* HEADER LINKS */
+.header a {
+    float: left;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+/* LINK HOVER */
+.header a:hover {
+    transform: scale(1.1);
+}
+
+/* ACTIVE LINK */
+.header a.active {
+    background-color: #ddd;
+    color: black;
+}
+
+.header i {
+    text-align: center;
+    padding: 5px 20px;
+    color:white;
+    transition: transform 0.3s ease;
+}
+
+.header i:hover {
+    transform: scale(1.1);
+}
+
+/* RIGHT ALIGN LINKS */
+.header-right {
+    float: right;
+}
+
+/* when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
     .header a {
-        float: left;
-        color: rgb(255, 255, 255);
-        text-align: center;
-        padding: 5px 20px;
-        text-decoration: none;
-        font-size: 18px;
-        line-height: 25px;
-        border-radius: 4px;
-        transition: transform 0.3s ease;
+    float: none;
+    display: block;
+    text-align: left;
     }
-
-    /* LINK HOVER */
-    .header a:hover {
-        transform: scale(1.1);
-    }
-
-    /* ACTIVE LINK */
-    .header a.active {
-        background-color: #ddd;
-        color: black;
-    }
-
-    .header i {
-        text-align: center;
-        padding: 5px 20px;
-        color:white;
-        transition: transform 0.3s ease;
-    }
-
-    .header i:hover {
-        transform: scale(1.1);
-    }
-
-    /* RIGHT ALIGN LINKS */
     .header-right {
-        float: right;
+    float: none;
     }
-
-    /* when the screen is 500px wide or less, stack the links on top of each other */
-    @media screen and (max-width: 500px) {
-        .header a {
-        float: none;
-        display: block;
-        text-align: left;
-        }
-        .header-right {
-        float: none;
-        }
-    }
+}
 
 /* MAIN */
-    .main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-family: 'Playfair Display';
-        margin-top: 1%; /* Top margin as a percentage */
-        margin-bottom: 5%; /* Bottom margin as a percentage */
-    }
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Playfair Display';
+    margin-top: 1%; /* Top margin as a percentage */
+    margin-bottom: 5%; /* Bottom margin as a percentage */
+}
 
-    .main h1 {
-        font-size: 90px;
-        font-weight: normal;
-        margin: 0;
-        text-align: center;
-        text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.8);
-    }
-    .main h2 {
-        font-size: 40px;
-        font-weight: normal;
-        margin: 0;
-        text-align: center;
-        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.8);
-    }
-    .main p {
-        font-size: 20px;
-        font-weight: normal;
-        margin: 0;
-        text-align: center;
-    }
+.main h1 {
+    font-size: 90px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.8);
+}
+.main h2 {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.8);
+}
+.main p {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
 
-    .main .intro {
-        text-align: center;
-        margin-left: 160px;
-        margin-right: 160px;
-    }
+.main .intro {
+    text-align: center;
+    margin-left: 160px;
+    margin-right: 160px;
+}
 
-    .main img {
-        margin-top: 20px;
-    }
+.main img {
+    margin-top: 20px;
+}
 
-    .social-links {
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
-        padding: 0;
-    }
+/* SOCIAL LINKS */
+.social-icon {
+    font-size: 40px; 
+    cursor:pointer;
+    margin: 10px 10px;
+    color: white;
+    transition: transform 0.3s ease;
+}
 
-    .social-links li {
-        margin: 0 10px;
-    }
+.social-icon:hover {
+    transform: scale(1.2);
+}
 
-    .social-links a img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
+.social-links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
 
-    .social-links a img:hover {
-        transform: scale(1.2);
-    }
-
-    .pfp {
-        box-shadow:2px 2px 30px rgb(0, 0, 0);
-        border-radius: 50%;
-    }
+.pfp {
+    box-shadow:2px 2px 30px rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
 
 /* PROJECT SCROLLER */
 .container {
@@ -278,70 +277,69 @@
 }
 
 /* SERVICE PAGE */
-    @media (min-width: 20em)
+@media (min-width: 20em)
+{
+    .image-left, .image-right
     {
-        .image-left, .image-right
-        {
-            display: flex;
-            align-items: center;
-        }
-
-        .image-left img
-        {
-
-            margin-right: 1em;
-            float: left; /* fallback */
-            box-shadow:2px 2px 30px var(--shadow);
-        }
-
-        .image-right img
-        {
-            order: 1;
-            margin-left: 1em;
-            float: right; /* fallback */
-            box-shadow:2px 2px 30px var(--shadow);
-        }
-        
-        /* clearfix for fallback */
-        .image-left::after,
-        .image-right::after
-        {
-            content: "";
-        display: block;
-            clear: both;
-        }
+        display: flex;
+        align-items: center;
     }
+
+    .image-left img
+    {
+        margin: 100px;
+        float: left; /* fallback */
+        box-shadow:2px 2px 30px var(--shadow);
+    }
+
+    .image-right img
+    {
+        order: 1;
+        margin: 100px;
+        float: right; /* fallback */
+        box-shadow:2px 2px 30px var(--shadow);
+    }
+    
+    /* clearfix for fallback */
+    .image-left::after,
+    .image-right::after
+    {
+        content: "";
+    display: block;
+        clear: both;
+    }
+}
     
 
 
 /* ABOUT PAGE */
-    .columns {
-        display: flex;
-        align-items: flex-start;
-    }
+.columns {
+    display: flex;
+    align-items: flex-start;
+}
 
-    /* Left column taking 3/4 of the page */
-    .left-column {
-        flex: 3;
-        padding: 20px;
-        overflow-y: auto;
-    }
+/* Left column taking 3/4 of the page */
+.left-column {
+    flex: 3;
+    padding: 20px;
+    overflow-y: auto;
+}
 
-    /* Right column taking 1/4 of the page */
-    .right-column {
-        flex: 2;
-        padding: 20px;
-        position: sticky;
-        top: 20%;
-        height: fit-content;
-    }
+/* Right column taking 1/4 of the page */
+.right-column {
+    flex: 2;
+    padding: 20px;
+    position: sticky;
+    top: 20%;
+    height: fit-content;
+}
 
-    .right-column iframe {
-        width: 460px;
-        height: 580px;
-    }
+.right-column iframe {
+    width: 460px;
+    height: 580px;
+}
 
-    .left-column p {
-        margin-bottom: 20px;
-        line-height: 1.6;
-    }
+.left-column p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}

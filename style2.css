@@ -4,16 +4,16 @@
     --black: black;
     --shadow: rgba(0, 0, 0, 0.8);
     --card: rgb(211, 211, 211);
-  }
+}
 
 /* BODY */
-    body {
-        /* https://www.freepik.com/free-photo/black-abstract-background-wallpaper-image_16250130.htm#query=dark%20website%20background&position=33&from_view=keyword&track=ais_hybrid&uuid=d5b11923-8311-4460-9add-d4a3aaa3bd31 */
-        background-image: url(images/greybackground.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-    }
+body {
+    /* https://www.freepik.com/free-photo/black-abstract-background-wallpaper-image_16250130.htm#query=dark%20website%20background&position=33&from_view=keyword&track=ais_hybrid&uuid=d5b11923-8311-4460-9add-d4a3aaa3bd31 */
+    background-image: url(images/greybackground.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 /* SIDEBAR LAYOUT */
 .header {
@@ -77,52 +77,100 @@
 
 /* MAIN CONTENT AREA */
 .main {
-    margin-left: 220px; /* Offset for the sidebar */
+    margin-left: 220px; 
     padding: 20px;
     color: var(--black);
-    font-family: 'Playfair Display';
+    font-family: 'Outfit';
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
 }
 
-.main h1, .main h2, .main p {
-    text-align: center;
+.main.main-page {
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* MEDIA QUERY FOR SMALL SCREENS */
-@media screen and (max-width: 600px) {
-    .header {
-        width: 150px;
-    }
-
-    .main {
-        margin-left: 160px;
-    }
+.left-main h1, .left-main h2, .left-main p {
+    text-align: left; 
 }
+
+/* ABOUT PAGE */
+.main-columns {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Left column taking 3/4 of the page */
+.left-main {
+    flex: 6;
+    padding: 100px;
+    overflow-y: auto;
+}
+
+/* Right column taking 1/4 of the page */
+.right-main {
+    flex: 4;
+    padding: 100px;
+    display: flex;
+    justify-content: flex-start; /* Align items horizontally */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.left-main p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* PROFILE PICTURE */
+.pfp {
+    box-shadow: 2px 2px 30px rgb(0, 0, 0);
+    border-radius: 15px; /* Beveled square shape */
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+    margin-right: 100px; 
+}
+
+/* SOCIAL LINKS */
 .social-links {
     display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
+    flex-direction: column; /* Stack icons vertically */
+    justify-content: center; /* Center the icons vertically */
+    align-items: flex-start; /* Align icons to the left */
 }
 
-.social-links li {
-    margin: 0 10px;
-}
-
-.social-links a img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+.social-icon {
+    font-size: 40px; 
+    cursor:pointer;
+    margin: 10px 10px;
+    color: var(--black);
     transition: transform 0.3s ease;
 }
 
-    .social-links a img:hover {
-        transform: scale(1.2);
-    }
+.social-icon:hover {
+    transform: scale(1.2);
+}
 
-    .pfp {
-        box-shadow:2px 2px 30px rgb(0, 0, 0);
-    }
+/* TEXT STYLING */
+.main h1 {
+    font-size: 90px;
+    font-weight: normal;
+    margin: 0;
+}
+.main h2 {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0;
+}
+.main p {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+}
+
 
 /* CARDS VERTICAL SCROLLING SYSTEM */
 .cards {
@@ -205,39 +253,40 @@
 
 
 /* SERVICE PAGE */
-    @media (min-width: 20em)
+@media (min-width: 20em)
+{
+    .image-left, .image-right
     {
-        .image-left, .image-right
-        {
-            display: flex;
-            align-items: center;
-        }
-
-        .image-left img
-        {
-
-            margin-right: 1em;
-            float: left; /* fallback */
-            box-shadow:2px 2px 30px var(--shadow);
-        }
-
-        .image-right img
-        {
-            order: 1;
-            margin-left: 1em;
-            float: right; /* fallback */
-            box-shadow:2px 2px 30px var(--shadow);
-        }
-        
-        /* clearfix for fallback */
-        .image-left::after,
-        .image-right::after
-        {
-            content: "";
-        display: block;
-            clear: both;
-        }
+        margin: 100px;
+        display: flex;
+        align-items: center;
     }
+
+    .image-left img
+    {
+        order: 1;
+        margin: 100px;
+        float: right; /* fallback */
+        box-shadow:2px 2px 30px var(--shadow);
+    }
+
+    .image-right img
+    {
+        order: 1;
+        margin: 100px;
+        float: right; /* fallback */
+        box-shadow:2px 2px 30px var(--shadow);
+    }
+    
+    /* clearfix for fallback */
+    .image-left::after,
+    .image-right::after
+    {
+        content: "";
+    display: block;
+        clear: both;
+    }
+}
     
 
 
@@ -250,7 +299,7 @@
 
 .right-column {
     flex: none;
-    width: 50%;
+    width: 70%;
     padding: 20px;
     display: flex;
     justify-content: center; 
@@ -263,7 +312,7 @@
 
 .left-column {
     flex: none; 
-    width: 50%; 
+    width: 70%; 
     padding: 20px;
 }
 
@@ -271,5 +320,6 @@
     margin-bottom: 20px;
     line-height: 1.6;
     text-align: left;
+    font-size: 20px;
 }
 
