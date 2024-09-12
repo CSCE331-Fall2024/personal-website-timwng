@@ -147,6 +147,10 @@ body {
     height: 250px;
 }
 
+.link {
+    color: rgb(126, 228, 228);
+}
+
 /* PROJECT SCROLLER */
 .container {
     max-width: 1400px;
