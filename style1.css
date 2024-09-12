@@ -336,6 +336,11 @@
         height: fit-content;
     }
 
+    .right-column iframe {
+        width: 460px;
+        height: 580px;
+    }
+
     .left-column p {
         margin-bottom: 20px;
         line-height: 1.6;
